@@ -1,6 +1,6 @@
 <div class="test">
     <p>Đây là component Home</p>
-    <h2>Chào bạn {{name}} : Muốn show biến từ code ra có 2 cách</h2>
+    <!-- <h2>Chào bạn {{name}} : Muốn show biến từ code ra có 2 cách</h2>
     <input type="text" value="{{name}}" title="đây là {{name}}"><br>
     <input type="text" [value]="name" [title]="'đây là ' + name">
     <h2 *ngIf="age > 18">Bạn quá già rồi</h2>
@@ -10,7 +10,7 @@
     <h3>From Html to Code ()</h3>
     <input type="text" [(ngModel)]="name" [title]="'đây là ' + name">
     <button (click)="resetName()">Reset Name</button>
-    
+
 
     <h3>ngTemplate IF then else</h3>
     <input type="text" [(ngModel)]="age" [title]="'Tuổi bạn là ' + age">
@@ -18,6 +18,43 @@
     <ng-template #gia><h2>Bạn quá già rồi</h2></ng-template>
     <ng-template #tre>
         <h2>Bạn còn trẻ</h2>
-    </ng-template>
+    </ng-template> -->
+    <h3>ngFor</h3>
+    <div *ngFor="let trai of traiCay; let i =index">
+        <li>{{i+1}} . {{trai}}</li>
+    </div>
+    
+    <table class="table1">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Loại Trái cây</th>
+                <th>Giá gốc</th>
+                <th>Giá</th>
+                <th>Giảm giá</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let trai of traiCay2; let i =index">
+                <td>{{i+1}}</td>
+                <td>{{trai.ten}}</td>
+                <td>{{trai.giagoc}}</td>
+                <td><span [ngClass]="{'so-am':trai.gia<trai.giagoc}">{{trai.gia}}</span></td>
+                <!-- <td>
+                    <span *ngIf="trai.giagoc>trai.gia; then giam;else kogiam"></span>
+                        <ng-template #kogiam>
+                            <span>{{trai.gia}}</span>
+                        </ng-template>
+                        <ng-template #giam>
+                            <span [ngClass]="'so-am'">{{trai.gia}}</span>
+                        </ng-template>                    
+                </td> -->
+                <td>
+                    <span *ngIf="trai.haGia">Đại hạ giá</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
 </div>
 
