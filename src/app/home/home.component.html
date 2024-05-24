@@ -3,5 +3,7 @@
     <h2>Chào bạn {{name}} : Muốn show biến từ code ra có 2 cách</h2>
     <input type="text" value="{{name}}" title="đây là {{name}}"><br>
     <input type="text" [value]="name" [title]="'đây là ' + name">
+    <h2 *ngIf="age > 18">Bạn quá già rồi</h2>
+    <h2 *ngIf="age <= 18">Bạn còn trẻ</h2>
 </div>
 
