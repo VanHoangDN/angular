@@ -5,5 +5,8 @@
     <input type="text" [value]="name" [title]="'đây là ' + name">
     <h2 *ngIf="age > 18">Bạn quá già rồi</h2>
     <h2 *ngIf="age <= 18">Bạn còn trẻ</h2>
+    <h3>From Html to Code ()</h3>
+    <input type="text" [(ngModel)]="name" [title]="'đây là ' + name">
+    <button (click)="resetName()">Reset Name</button>
 </div>
 
