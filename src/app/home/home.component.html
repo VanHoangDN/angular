@@ -37,8 +37,8 @@
         <tbody>
             <tr *ngFor="let trai of traiCay2; let i =index">
                 <td>{{i+1}}</td>
-                <td>{{trai.ten}}</td>
-                <td>{{trai.giagoc}}</td>
+                <td>{{trai.ten | uppercase}}</td>
+                <td>{{trai.giagoc | currency:"USD":"symbol":"1.2"}}</td>
                 <td><span [ngClass]="{'so-am':trai.gia<trai.giagoc}">{{trai.gia}}</span></td>
                 <!-- <td>
                     <span *ngIf="trai.giagoc>trai.gia; then giam;else kogiam"></span>
@@ -49,8 +49,11 @@
                             <span [ngClass]="'so-am'">{{trai.gia}}</span>
                         </ng-template>                    
                 </td> -->
-                <td>
+                <!-- <td [ngClass]="{'giatot': trai.haGia}">
                     <span *ngIf="trai.haGia">Đại hạ giá</span>
+                </td> -->
+                <td [ngClass]="{'giatot': trai.haGia}">
+                    <span>{{trai.haGia| onSale}}</span>
                 </td>
             </tr>
         </tbody>
