@@ -1,2 +1,7 @@
-<div class="test"><p>Đây là component Home</p></div>
+<div class="test">
+    <p>Đây là component Home</p>
+    <h2>Chào bạn {{name}} : Muốn show biến từ code ra có 2 cách</h2>
+    <input type="text" value="{{name}}" title="đây là {{name}}"><br>
+    <input type="text" [value]="name" [title]="'đây là ' + name">
+</div>
 
