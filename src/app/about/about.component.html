@@ -1,4 +1,5 @@
-<p>About</p>
+<p appHighlight>About</p>
+<p [appHighlight]="myColor">About</p><p [appHighlight]="'orange'">About</p>
 <ul [ngSwitch]="loginName">
     <li *ngSwitchCase="'user'">
         <p>User logged in</p>
