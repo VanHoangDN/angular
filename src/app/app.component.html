@@ -3,21 +3,18 @@
     <a class="navbar-brand" href="#">Title</a>
     <ul class="nav navbar-nav">
       <li class="active">
-        <a href="#">Home</a>
+        <a routerLink="/">Home</a>
       </li>
       <li>
-        <a href="#">Link</a>
+        <a routerLink="/about">Link</a>
       </li>
     </ul>
 </div>
 </nav>
 
 <div class="container">
-  <img src="assets/images/128.png" alt="">
-  <!--add component vào-->
-  <app-home></app-home>
-  
-  <router-outlet></router-outlet>
+  <router-outlet>
+  </router-outlet>
 </div>
 
 
