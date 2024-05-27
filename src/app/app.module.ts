@@ -7,11 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { OnSalePipe } from './on-sale.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductsComponent } from './products/products.component';
 import { HighLightDirective } from './Directives/high-light.directive';
 import { TemplateDivenFormComponent } from './template-diven-form/template-diven-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +24,14 @@ import { TemplateDivenFormComponent } from './template-diven-form/template-diven
     PageNotFoundComponent,
     ProductsComponent,
     HighLightDirective,
-    TemplateDivenFormComponent
+    TemplateDivenFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
