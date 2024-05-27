@@ -11,6 +11,7 @@ import { OnSalePipe } from './on-sale.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductsComponent } from './products/products.component';
 import { HighLightDirective } from './Directives/high-light.directive';
+import { TemplateDivenFormComponent } from './template-diven-form/template-diven-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HighLightDirective } from './Directives/high-light.directive';
     OnSalePipe,
     PageNotFoundComponent,
     ProductsComponent,
-    HighLightDirective
+    HighLightDirective,
+    TemplateDivenFormComponent
   ],
   imports: [
     BrowserModule,

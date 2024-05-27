@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { CommonService } from '../Services/common.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { CommonService } from '../Services/common.service';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent{
+export class AboutComponent implements OnInit{
   public loginName = 'user';
   public myColor = 'red';
   public counter = 0
