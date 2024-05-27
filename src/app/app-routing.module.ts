@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { TemplateDivenFormComponent } from './template-diven-form/template-diven-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { GetDataComponent } from './get-data/get-data.component';
+import { PostDataComponent } from './post-data/post-data.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'about',component:AboutComponent},
   {path:'form',component:TemplateDivenFormComponent},
   {path:'reactform',component:ReactiveFormComponent},
+  {path:'postdata',component:PostDataComponent},
   {path:'getdata',component:GetDataComponent},
   {path:'**',component:PageNotFoundComponent}
 ];

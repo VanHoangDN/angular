@@ -1,10 +1,54 @@
 {
-    "posts":[
-        {"id":1,"title":"json-server","author":"typicode"}
-    ],
-    "comments":[
-        {"id":1,"body":"some comment","postId":1},
-        {"id":2,"body":"some comment 2","postId":1}
-    ],
-    "profile":{"name":"typicode"}
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment 2",
+      "postId": 1
+    },
+    {
+      "id": "7886",
+      "body": "post comment",
+      "postId": 2
+    },
+    {
+      "id": "462e",
+      "body": "post comment",
+      "postId": 2
+    },
+    {
+      "id": "127c",
+      "body": "post comment",
+      "postId": 2
+    },
+    {
+      "id": "598a",
+      "body": "post comment",
+      "postId": 2
+    },
+    {
+      "id": "4b1c",
+      "body": "post comment",
+      "postId": 2
+    },
+    {
+      "id": "cefd",
+      "body": "Đây là comment Nguyễn",
+      "postId": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

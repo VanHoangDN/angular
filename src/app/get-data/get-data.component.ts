@@ -14,10 +14,10 @@ export class GetDataComponent implements OnInit {
     this.httpServerService.getComments().subscribe(data =>{
       console.log('getComments',data);
     });
-    this.httpServerService.getRandomUser(5).subscribe(data =>{
-      console.log('getRandomUser',data);
-      console.log('getRandomUser',data.results);
-    })
+    // this.httpServerService.getRandomUser(5).subscribe(data =>{
+    //   console.log('getRandomUser',data);
+    //   console.log('getRandomUser',data.results);
+    // })
   }
 
 }

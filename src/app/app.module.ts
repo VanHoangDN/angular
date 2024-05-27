@@ -16,6 +16,7 @@ import { HighLightDirective } from './Directives/high-light.directive';
 import { TemplateDivenFormComponent } from './template-diven-form/template-diven-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { GetDataComponent } from './get-data/get-data.component';
+import { PostDataComponent } from './post-data/post-data.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { GetDataComponent } from './get-data/get-data.component';
     HighLightDirective,
     TemplateDivenFormComponent,
     ReactiveFormComponent,
-    GetDataComponent
+    GetDataComponent,
+    PostDataComponent
   ],
   imports: [
     BrowserModule,

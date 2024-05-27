@@ -20,6 +20,13 @@ export class HttpServerService {
     return this.httpClient.get<any>(url,this.httpOptions);
   }
 
+  public postComments(payload:any):Observable<any>{
+    const url = `${this.REST_API_SERVER}/comments`;
+    console.log('postComment = ',url);
+    console.log('payload là ',payload);
+    return this.httpClient.post<any>(url,payload,this.httpOptions);
+  }
+
   public getRandomUser(users:number=1):Observable<any>{
     const url = `${this.REST_API_SERVER_RandomUser}`+users;
     console.log(url);
