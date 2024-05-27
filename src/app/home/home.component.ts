@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../Services/common.service';
 
 @Component({
   selector: 'app-home',
@@ -24,14 +25,21 @@ export class HomeComponent implements OnInit {
   {
     city:'Thành phố Hồ Chí Minh',
     district:['Quận 1','Quận 2','Quận 3','Quận 4','Quận 5','Quận 6','Quận 7','Quận 8','Quận 9','Quận 10','Quận 11','Quận 12','Quận Bình Tân','Quận Bình Thạnh','Quận Gò Vấp','Quận Phú Nhuận','Quận Tân Bình','Quận Tân Phú','Quận Thủ Đức','Huyện Bình Chánh','Huyện Cần Giờ','Huyện Củ Chi','Huyện Hóc Môn','Huyện Nhà Bè']
-  }]
+  }];
+
+  public counter = 0;
+  public counterBinhPhuong = 0;
   
 
-  constructor() { }
+  constructor(private common: CommonService) { }
 
   ngOnInit(): void {
     console.log('trái cây = ',this.traiCay);
     console.log('city = ',this.cities);
+
+    this.counter=this.common.counter;
+    this.counterBinhPhuong = this.common.binhPhuong(this.counter);
+    this.common.counter++;
   }
 
   public changeCity(event:any):void{
