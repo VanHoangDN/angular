@@ -8,12 +8,14 @@ import { AboutComponent } from './about/about.component';
 
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 import { OnSalePipe } from './on-sale.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductsComponent } from './products/products.component';
 import { HighLightDirective } from './Directives/high-light.directive';
 import { TemplateDivenFormComponent } from './template-diven-form/template-diven-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { GetDataComponent } from './get-data/get-data.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +27,15 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     ProductsComponent,
     HighLightDirective,
     TemplateDivenFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    GetDataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
